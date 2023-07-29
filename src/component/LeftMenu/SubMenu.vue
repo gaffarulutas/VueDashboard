@@ -4,7 +4,9 @@
         <div class="navigation-menu-group">
             <div id="ecommerce">
                 <ul>
-                    <li></li>
+                    <li class="navigation-divider d-flex align-items-center">
+                        <i class="mr-2" data-feather="home"></i> Dashboard
+                    </li>
                     <li>
                         <router-link active-class="active" to="/">Ana Sayfa</router-link>
                     </li>

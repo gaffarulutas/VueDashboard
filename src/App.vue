@@ -26,7 +26,10 @@ onMounted(() => {
         $('.navigation .navigation-menu-body .navigation-menu-group ul li a.active').closest('div').addClass('open');
         $('.navigation .navigation-menu-tab [data-nav-target="#' + $('.navigation .navigation-menu-body .navigation-menu-group ul li a.active').closest('div').attr('id') + '"]').addClass('active');
         $('body.horizontal-navigation .horizontal-navigation ul li a.active').closest('ul').parent('li').addClass('open').closest('ul').parent('li').addClass('open');
-
+        $('[data-toggle="tooltip"]').tooltip({
+            container: 'body'
+        });
+        $('[data-toggle="popover"]').popover();
     },
         200);
 });

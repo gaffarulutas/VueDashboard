@@ -2,7 +2,7 @@
     <div class="navigation-menu-tab">
             <ul>
                 <li>
-                    <a href="#" data-toggle="tooltip" data-placement="right" title="Ecommerce" data-nav-target="#ecommerce">
+                    <a href="#" data-toggle="tooltip" data-placement="right" title="Dashboard" data-nav-target="#ecommerce">
                         <i data-feather="home"></i>
                     </a>
                 </li>
