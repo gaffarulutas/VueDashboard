@@ -1,14 +1,13 @@
 import Home from '../Pages/Home.vue'
 import User from '../Pages/User.vue'
 import { createRouter, createWebHistory } from 'vue-router';
-
 const routers = [
     {
         path: '/',
         component: Home,
         name: 'home',
         meta: {
-            title: 'Ana Sayfa'
+            title: 'Ana Sayfa',
         }
     },
     {

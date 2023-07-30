@@ -1,3 +1,15 @@
+<script>
+import { createApp } from 'vue';
+
+export default {
+    methods: {
+        logOut() {
+            localStorage.clear();
+            location.reload();
+        }
+    }
+}
+</script>
 <template>
     <div class="sidebar-group">
         <div class="sidebar" id="user-menu">
@@ -20,7 +32,7 @@
                         </a>
                         <a href="#" class="list-group-item p-l-r-0">Billing</a>
                         <a href="#" class="list-group-item p-l-r-0" data-sidebar-target="#settings">Settings</a>
-                        <a href="login.html" class="list-group-item p-l-r-0 text-danger"
+                        <a @click="logOut()" class="list-group-item p-l-r-0 text-danger"
                             data-sidebar-target="#settings">Sign Out!</a>
                     </div>
                 </div>

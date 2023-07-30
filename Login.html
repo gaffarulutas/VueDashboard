@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta
+        content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        name="viewport">
+    <meta content=yes name=mobile-web-app-capable>
+    <meta content=yes name=apple-mobile-web-app-capable>
+    <meta content=yes name=apple-touch-fullscreen>
+    <meta content=True name=HandheldFriendly>
+    <title>Giriş yap</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="assets/css/login.css" rel="stylesheet" />
+    <link rel='shortcut icon' type='image/x-icon' href='assets/img/favicon.ico' />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link href="assets/Semantic/semantic.min.css" rel="stylesheet" />
+    <script src="assets/Semantic/semantic.min.js"></script>
+    <script src="assets/js/Login.js"></script>
+
+</head>
+
+<body class="login">
+    <div
+        style="position:fixed;top:0;right:0;bottom:0;left:0;background-color: rgba(20, 47, 53, 0.09);z-index: -10;background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABZJREFUeNpi2r9//38gYGAEESAAEGAAasgJOgzOKCoAAAAASUVORK5CYII=);">
+    </div>
+    <div class="logo">
+    </div>
+    <div class="parentContent">
+        <div class="contentLogin">
+            <div id="Giris" class="login-box">
+                <div id="dvKullaniciAdiSifre">
+                    <div class="ui  form  LoginScreen">
+                        <div class="field">
+                            <label id="lblLoginEposta">E-Posta</label>
+                            <div class="ui left icon input">
+                                <input type="email" id="txtMail" name="txtMail" autocomplete="off"
+                                    placeholder="E-Posta">
+                                <i class="envelope icon"></i>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label id="lblLoginSifre">Şifre</label>
+                            <div class="ui left icon input">
+                                <input type="password" id="txtSifre" name="txtSifre" autocomplete="off"
+                                    placeholder="Şifre">
+                                <i class="key icon"></i>
+                            </div>
+                        </div>
+                        <div class="field ">
+                            <div class="ui fluid search selection dropdown">
+                                <input type="hidden" value="0" id="drpDil">
+                                <div class="default text">Dil Seçiniz</div>
+                                <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <div class="item" data-value="0"><i class="tr flag"></i>Türkçe</div>
+                                    <div class="item" data-value="1"><i class="gb flag"></i>English</div>
+                                </div>
+                            </div>
+                            <div class="ui divider"></div>
+
+                        </div>
+                        <div class="field">
+                            <label id="lblIp">İp Adresiniz</label>
+                            <div id="dvip" class="ui left icon input loading">
+                                <input type="text" id="txtIp" readonly autocomplete="off"
+                                    placeholder="You are ip adress">
+                                <i class="server icon"></i>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="ui primary submit button" id="btnGiris">Giriş Yap</button>
+                            <span style="line-height: 3;" class="forget-password-text" id="btnSifreUnuttum">Şifremi
+                                Unuttum</span> |
+                            <span style="line-height: 3;" class="forget-password-text" id="btnUyeOl">Üye Ol</span><br>
+                        </div>
+                        <div class="ui error message"></div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui vertical form fluid menu" id="lisans" style="display:none;">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

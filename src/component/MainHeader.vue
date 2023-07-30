@@ -1,4 +1,14 @@
- 
+<script>
+export default {
+  data () {
+    return {
+      publicPath: '/assets/img/'
+    }
+  }
+}
+</script>
+
+
 <template>
     <div class="header d-print-none">
         <div class="header-left">
@@ -9,8 +19,8 @@
             </div>
             <div class="header-logo">
                 <router-link to="/">
-                    <img class="logo" src="assets/img/logo.svg" />
-                    <img class="logo-light" src="assets/img/logo-light.svg" />
+                    <img class="logo" :src="`${publicPath}logo.svg`" />
+                    <img class="logo-light" :src="`${publicPath}logo-light.svg`" />
                 </router-link>
             </div>
         </div>
