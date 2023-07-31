@@ -3,6 +3,37 @@ function Translate(tr, en) {
     return tr;
 }
 $(function () {
+
+
+//var input = document.querySelector("#phone");
+
+$("#phone").intlTelInput({
+	geoIpLookup: function (callback) {
+		$.get("http://ipinfo.io", function () { }, "jsonp").always(function (resp) {
+			var countryCode = (resp && resp.country) ? resp.country : "";
+			callback(countryCode);
+		});
+	},
+    preferredCountries: ["tr", "bg", "ba", "hr","az","mk"],
+	initialCountry: "auto",
+	separateDialCode: false,
+});
+
+$('#phone').on('countrychange', function (e) {
+
+	$(this).val('');
+
+	var selectedCountry = $(this).intlTelInput('getSelectedCountryData');
+	var dialCode = selectedCountry.dialCode;
+	var maskNumber = intlTelInputUtils.getExampleNumber(selectedCountry.iso2, 0, 0);
+	maskNumber = maskNumber.replace('+' + dialCode + ' ', '');
+	mask = maskNumber.replace(/[0-9+]/ig, '0');
+	maskPlaceHolder = mask.replace(/[0-9+]/ig, '_');
+	$('#phone').mask(mask, { placeholder: maskNumber });
+});
+
+
+
     $('.ui.dropdown').dropdown('set selected', [0]);
 
     $.ajax({
@@ -24,12 +55,12 @@ $(function () {
         delay: false,
         on: 'blur',
         fields: {
-            txtMail: {
-                identifier: 'txtMail',
+            phone: {
+                identifier: 'phone',
                 rules: [
                     {
-                        type: 'email',
-                        prompt: Translate("Lütfen geçerli e-posta adresini giriniz", "Please enter a valid e-mail")
+                        type: 'empty',
+                        prompt: 'Please enter a valid Phone number'
                     }
                 ]
             },
@@ -38,7 +69,7 @@ $(function () {
                 rules: [
                     {
                         type: 'empty',
-                        prompt: Translate("lütfen bir şifre girin", "Please enter a password")
+                        prompt: 'Please enter a password'
                     }
                 ]
             }
@@ -58,3 +89,5 @@ $(function () {
 
 
 })
+
+

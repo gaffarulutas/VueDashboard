@@ -16283,10 +16283,6 @@ ol.ui.list li[value]:before {
         vertical-align: middle
     }
 
-    .ui.form .field .ui.input input, .ui.form .fields .field .ui.input input {
-        width: auto
-    }
-
     .ui.form .eight.fields .ui.input input, .ui.form .five.fields .ui.input input, .ui.form .four.fields .ui.input input, .ui.form .nine.fields .ui.input input, .ui.form .seven.fields .ui.input input, .ui.form .six.fields .ui.input input, .ui.form .ten.fields .ui.input input, .ui.form .three.fields .ui.input input, .ui.form .two.fields .ui.input input, .ui.form .wide.field .ui.input input {
         -webkit-box-flex: 1;
         -ms-flex: 1 0 auto;
@@ -20266,7 +20262,7 @@ ol.ui.list li[value]:before {
 
             .ui.message .list:not(.ui) li:before {
                 position: absolute;
-                content: 'â€¢';
+                content: '●';
                 left: -1em;
                 height: 100%;
                 vertical-align: baseline

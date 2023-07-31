@@ -5,12 +5,14 @@ overflow:hidden !important;
     background: url(../img/LoginBg.png);
     background-size: inherit;
     background-repeat: no-repeat;
+    
 }
 
     .login .logo {
         margin: 60px auto 20px;
         padding: 15px;
-        text-align: center
+        text-align: center;
+        
     }
 
     .login .contentLogin {
@@ -172,6 +174,9 @@ ol, ul {
 
     .login .logo img {
         height: 35px;
+    position: absolute;
+    left: 53px;
+    top: 49px;
     }
 
 .login .contentLogin {
