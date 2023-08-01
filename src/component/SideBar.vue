@@ -1,11 +1,9 @@
 <script>
-import { createApp } from 'vue';
-
 export default {
     methods: {
         logOut() {
             localStorage.clear();
-            location.reload();
+            window.location = '/';
         }
     }
 }
